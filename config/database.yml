@@ -1,0 +1,24 @@
+default: &default
+   adapter: postgresql
+   encoding: unicode
+  
+development:
+   adapter: postgresql
+   encoding: unicode
+   database: blog_development
+   username: lak
+   password: password
+
+test:
+   adapter: postgresql
+   encoding: unicode
+   database: blog_development
+   username: lak
+   password: password
+ 
+production:
+   adapter: postgresql
+   encoding: unicode
+   database: blog_development
+   username: lak
+   password: password
