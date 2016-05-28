@@ -10,6 +10,7 @@
   <% end %>
 
   <%= link_to ' Add article', new_article_path, class: 'btn btn-primary	 glyphicon glyphicon-plus-sign',style:'margin-bottom: 10px;' %>
+  <%= will_paginate @articles, :class => 'flickr_pagination' %>
     <%= render @articles %>
     <% if @articles.blank? %>
     	<div>
