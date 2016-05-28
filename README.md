@@ -14,8 +14,10 @@ Completed:
 
 Issues:
 
-* [x] The first time to develop on Ubuntu, it takes me 4 hours just for first step : create demo with database. THis page https://gorails.com/setup/ubuntu/14.10 helped me a lot
+* [x] The first time to develop on Ubuntu, it takes me 4 hours just for first step : create demo with database. THis page https://gorails.com/setup/ubuntu/14.10 helped me a lot.
+* [x] The solution was to change config.assets.compile = false to config.assets.compile = true in the config/environments/production.rb file help me to show icon on the server
+* [x] The first time to work with github
 
-![Video Walkthrough](khang_blog.gif)
+![Video Walkthrough](out.gif)
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with [Byzanz](https://wiki.ubuntu.com/CreatingScreencasts).
