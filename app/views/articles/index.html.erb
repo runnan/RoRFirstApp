@@ -1,13 +1,26 @@
 
 
-  <p id="notice"><%= notice %></p>
+
 <div class="container">
   <h1>Khang 's Blog</h1>
-  <h2>This is my first RoR for CoderSchool</h2>
+  <% unless notice.nil? %>
+  	  <div class="alert alert-success">
+	  <strong>Success! </strong> <%= notice %>
+	</div>
+  <% end %>
 
+  <%= link_to ' Add article', new_article_path, class: 'btn btn-primary	 glyphicon glyphicon-plus-sign',style:'margin-bottom: 10px;' %>
     <%= render @articles %>
+    <% if @articles.blank? %>
+    	<div>
+    		No record found !!!
+    	</div>
+    <% end %>
+    
+
+    <%= will_paginate @articles, :class => 'flickr_pagination' %>
 
   <br>
 
-  <%= link_to 'New Article', new_article_path %>
+  
 </div>

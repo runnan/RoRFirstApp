@@ -1,13 +1,21 @@
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-12">
       <div class="card">
+        <div  class="pull-xs-right" style="margin-top: 5px; margin-right: 5px;">
+             <%= link_to '', edit_article_path(article),
+                class:'glyphicon glyphicon-edit'%> 
+            <%= link_to " ", article, method: :delete,
+                                    data: { confirm: "You sure?" },class:'glyphicon glyphicon-remove'%>
+           
+          </div>
+        <h4 class="card-header">
+            <%= article.title %> 
+              
+          </h4>
         <div class="card-block">
-          <h4 class="card-title"><%= article.title %></h4>
+         
+          
           <p class="card-text"><%= @markdown.render(article.body).html_safe %></p>
-        </div>
-        <div class="card-footer">
-          <%= link_to 'Edit', edit_article_path(article),
-              class:'btn btn-warning'%>
         </div>
       </div>
     </div>
